@@ -107,4 +107,4 @@ def turtle_race(bet, turtle_choice):
     screen.bye()  # Close the screen automatically after race ends
     return winner
 
-# Example usage:
+

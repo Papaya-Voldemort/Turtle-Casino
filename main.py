@@ -1,6 +1,8 @@
 # Turtle casino
 import turtle
-from helpers import turtle_race
+
+import tug_game
+from race_game import turtle_race
 
 money = 1000
 print(r"""
@@ -13,13 +15,16 @@ print(r"""
       \__\/    \_____\/ \_\/ \_\/  \__\/    \_____\/ \_____\/     \_____\/ \__\/\__\/ \_____\/\________\/ \__\/ \__\/ \_____\/ 
                                                                                                                                """)
 
-print("Welcome to Turtle Casino!")
+print("Welcome to the Turtle Casino!")
 while money > 0:
     game = input("What do you want to play?\n"
-                 "1. Turtle Race\n")
+                 "1. Turtle Race\n"
+                 "2. Turtle Tug-of-War\n"
+                 "3. Exit\n")
 
     if game.strip().lower() in ["turtle race", "1"]:
-        bet = input("How much would you like to bet?")
+        print("Time for a Turtle Race!")
+        bet = input("How much would you like to bet?\n")
         money -= int(bet)
         turtle_choice = input("Which turtle would you like to race?\n"
                        "0. Red Turtle\n"
@@ -47,3 +52,29 @@ while money > 0:
         else:
             print("You lose!")
             print("Your new balance is:", money)
+
+    elif game.strip().lower() in ["turtle tug-of-war", "2"]:
+        print("Time for a game of Turtle Tug-of-War!")
+        bet = input("How much would you like to bet?\n")
+        money -= int(bet)
+        turtle_choice = input("Which turtle team would you like to tug?\n"
+                       "0. Team Mud (Green)\n"
+                       "1. Team Grass (Brown)\n")
+        if turtle_choice not in ["0", "1"]:
+            print("Invalid team")
+            quit()
+        int(turtle_choice)
+
+        winner = tug_game.turtle_tug(bet, turtle_choice)
+        print("The winner is:", winner)
+        turtles = ["mud", "grass"]
+        if winner == turtles[int(turtle_choice)]:
+            print("You win!")
+            money += int(bet) * 2
+            print("Your new balance is:", money)
+        else:
+            print("You lose!")
+            print("Your new balance is:", money)
+
+
+

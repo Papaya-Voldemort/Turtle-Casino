@@ -1,11 +1,12 @@
 # Turtle Casino
 
-Welcome to Turtle Casino, a simple Python-based casino game featuring a fun turtle race simulation!
+Welcome to Turtle Casino, a simple Python-based casino game featuring fun turtle games including a race simulation and a tug-of-war competition!
 
 ## Overview
 
-This game allows you to bet virtual money on a race among colorful turtles. You start with a balance of 1000 units of money. Choose a turtle to bet on and enter your bet amount. Watch the race unfold graphically using the Python `turtle` module, and see if your turtle wins to double your bet!
+This game allows you to bet virtual money on different turtle games. You start with a balance of 1000 units of money. Choose a game, enter your bet amount, and make your selection. Watch the games unfold graphically using the Python `turtle` module, and see if you win to double your bet!
 
+### Turtle Race
 The race features 10 turtles, each represented by a distinct color:
 - Red
 - Blue
@@ -18,14 +19,23 @@ The race features 10 turtles, each represented by a distinct color:
 - Black
 - White
 
+### Turtle Tug-of-War
+The tug-of-war features two teams:
+- Team Mud (Green)
+- Team Grass (Brown)
+
 ## How to Play
 
 1. Run the main program.
-2. Choose the game to play (currently only Turtle Race is available).
+2. Choose the game to play:
+   - Turtle Race
+   - Turtle Tug-of-War
 3. Enter the amount you want to bet.
-4. Choose a turtle by entering its corresponding number.
-5. Watch the race and see if your turtle wins.
-6. Your money will be updated according to the race outcome.
+4. Make your selection:
+   - For Turtle Race: Choose a turtle by entering its corresponding number (0-9)
+   - For Turtle Tug-of-War: Choose a team by entering its corresponding number (0-1)
+5. Watch the game and see if your selection wins.
+6. Your money will be updated according to the game outcome.
 7. Continue playing as long as you have money.
 
 ## Requirements
@@ -36,18 +46,19 @@ The race features 10 turtles, each represented by a distinct color:
 ## File Structure
 
 - `main.py`: Main game loop and user input.
-- `helpers.py`: Contains the turtle race visualization logic.
+- `race_game.py`: Contains the turtle race visualization logic.
+- `tug_game.py`: Contains the turtle tug-of-war visualization logic.
 
 ## Notes
 
-- The race visuals and mechanics are powered by the `turtle` graphics module.
+- The game visuals and mechanics are powered by the `turtle` graphics module.
 - The starting money is fixed at 1000 units.
-- Invalid turtle choices will terminate the game.
+- Invalid selections will terminate the game.
 
 ## Acknowledgments
 
-This project was developed with assistance from **GPT-4.1 Mini** (an AI assistant) for guidance and support in coding and structuring.
+This project was developed with assistance from **GPT-4.1 Mini** (an AI assistant) and **Jetbrain's Junie** for guidance and support in coding, structuring, and README updates.
 
 ---
 
-Enjoy the Turtle Casino and may the best turtle win! (More games may be added in the future.)
+Enjoy the Turtle Casino and may the best turtle win!
